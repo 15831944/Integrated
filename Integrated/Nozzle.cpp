@@ -227,7 +227,7 @@ void Nozzle::ImportSplitCylinder(Block block)
 	NXFunction::MoveBodyByIncrement("FIXED_BLOCK",X,Y,Z);
 	NXFunction::MoveBodyByIncrement("SUB_FIXED_BLOCK",X,Y,Z);
 
-	//属性
+	//属性 assemblyID在BOM.DLL中将转换为一系列的物料编码，将被删除
 	string body_name="CYLINDER";
 	NXFunction::SetAttribute(body_name,"基本参数","assembly_id",block.assembly_id);
 	NXFunction::SetAttribute(body_name,"基本参数","安装方式","分体式");
@@ -336,7 +336,7 @@ void Nozzle::ImportManifoldCylinder(Block block)
 	NXFunction::MoveBodyByIncrement("CYLINDER",X,Y,0);
 	NXFunction::MoveBodyByIncrement("SUB_CYLINDER_BOTTOM",X,Y,0);
 
-	//属性
+	//属性 assemblyID在BOM.DLL中将转换为一系列的物料编码，将被删除
 	string body_name="CYLINDER";
 	NXFunction::SetAttribute(body_name,"基本参数","assembly_id",block.assembly_id);
 	NXFunction::SetAttribute(body_name,"基本参数","安装方式","整体式");

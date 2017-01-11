@@ -252,8 +252,8 @@ void Manifold::CreateBolt()
 	string spacer_code = "44101";	
 	string spacer_remark = "";
 	long double spacer_h = 0;
-	string d = "10";
-	if(bolt_m==8)       d="10";
+	string d = "16";
+	if(bolt_m==8)       d="16";
 	else if(bolt_m==10) d="18";
 	else if(bolt_m==12) d="24";
 	string strsql="SELECT top 1 cast(SUBSTRING(st_code,11,3) as int) as EXPR1 ";
